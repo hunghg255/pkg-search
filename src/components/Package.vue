@@ -82,13 +82,13 @@ onKeyData(' ', () => {
 
 const columns = [
   {
-    width: 42,
+    width: 40,
     name: 'Package Name',
     id: 'name',
     link: 'repoLink',
   },
   {
-    width: 20,
+    width: 15,
     name: 'Version',
     id: 'activeVersion',
   },
@@ -99,9 +99,14 @@ const columns = [
     link: 'authorLink',
   },
   {
-    width: 15,
-    name: 'Downloads',
-    id: 'downloads',
+    width: 10,
+    name: 'Download',
+    id: 'downloads'
+  },
+  {
+    width: 10,
+    name: 'Source',
+    id: 'repoLink',
   },
 ] as const
 </script>
@@ -165,8 +170,15 @@ const columns = [
               color="blue"
             >❯</Span>
           </Div>
-          <Span color="white">
+
+          <Span v-if="column.id !== 'repoLink'" color="white">
             {{ item[column.id] }}
+          </Span>
+
+          <Span color="blue" v-if="column.id === 'repoLink'">
+            <Link :href="item[column.id]" :fallback="false" :inverse="false">
+              Source
+            </Link>
           </Span>
         </Div>
       </Div>

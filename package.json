@@ -1,7 +1,7 @@
 {
   "name": "pkg-search",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "pnpm@7.33.7",
   "description": "Interactive CLI for npm - search and install JavaScript package.",
   "author": "hunghg255",

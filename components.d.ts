@@ -14,6 +14,7 @@ declare module '@vue/runtime-core' {
     Guide: typeof import('./src/components/Guide.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     InputBox: typeof import('./src/components/InputBox.vue')['default']
+    Link: typeof import('vue-termui')['TuiLink']
     Package: typeof import('./src/components/Package.vue')['default']
     Progressbar: typeof import('vue-termui')['TuiProgressBar']
     Span: typeof import('vue-termui')['TuiText']
